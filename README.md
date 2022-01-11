@@ -12,17 +12,23 @@ A mips (Microprocessor without Interlocked Pipeline Stages) lib emulator.
 * end
 * dump
 
-** Dump and end are not in the mips catalog. **
+*"Dump" and "end" are not in the mips instruction code.
+
+end: Stops the simulation.
+
+dump: Shows the value of the virtual microprocessor registers.
 
 # Cache: 
 
 ## All cache configs ar implemented:
     
-    Full associative
+* Full associative
+* Set associative
+* Direct maped.
 
-    Set associative
-
-    Direct maped.
+## Write strategies implemented:
+* Write through
+* write back
 
 Custom eviction policy could be provided (for full association and set associative)
 
