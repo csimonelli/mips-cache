@@ -1,0 +1,45 @@
+# Benchmark B0 
+.align 5 
+li t1, 100 
+loop: 
+lw t2, 1024(zero) 
+subu t1, t1, 1 
+bnez t1, loop 
+
+
+# Benchmark B1
+.aling 5
+li t1, 100
+loop: 
+lw t2, 1028(zero)
+subu t1, t1, 1
+bnez t1, loop
+
+# Benchmark B2 
+.align 5 
+li t1, 100 
+loop: lw t2, 1028(zero) 
+lw t2, 1032(zero) 
+subu t1, t1, 1 
+bnez t1, loop 
+
+
+# Benchmark B3 
+.align 5 
+li t1, 100 
+loop: lw t2, 1028(zero) 
+lw t2, 1032(zero)
+lw t2, 1036(zero) 
+subu t1, t1, 1 
+bnez t1, loop 
+
+
+# Benchmark B4
+.align 5
+li t1, 100
+loop: lw t2, 1028(zero)
+lw t2, 1032(zero)
+lw t2, 1036(zero)
+lw t2, 1040(zero)
+subu t1, t1, 1
+bnez t1, loop
