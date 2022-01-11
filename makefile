@@ -5,7 +5,7 @@ mips: emulator.o instruction.o regs.o operation.o memmgr.o cache.o memspy.o ram.
 	$(CC) $(CFLAGS) emulator.o instruction.o regs.o operation.o ram.o memmgr.o cache.o memspy.o memutils.o -lm -fPIC -shared -o libmips.so  
 
 main: cmd/main.c cmd/cases.c cmd/bench.c cmd/bench.h cmd/cases.h mips
-	$(CC) $(CFLAGS) -L cmd/cases.c cmd/main.c cmd/bench.c -lmips -o main
+	$(CC) $(CFLAGS) -L . cmd/cases.c cmd/main.c cmd/bench.c -lmips -o main
 
 instruction.o: mips/instruction.c mips/instruction.h
 	$(CC) $(CFLAGS) -c -fPIC mips/instruction.c
